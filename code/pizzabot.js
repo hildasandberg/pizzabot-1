@@ -5,10 +5,10 @@ const pepperoni = "Pepperoni Pizza"
 const pizzaPrice = 80
 
 //Put your Javscript code here:
-
 const X = vegetarian
 const Y = hawaiian
 const Z = pepperoni
+
 alert("Hey! Happy to serve your pizza. On our menu we have " + X + ", " + Y +" and " + Z)
 
 const orderName = prompt("Enter the name of the pizza you want to order today.")
@@ -17,9 +17,9 @@ const orderName = prompt("Enter the name of the pizza you want to order today.")
 const checkOrderName=(name)=> {
   if (orderName === "vegetarian" || orderName === "hawaiian" || orderName === "pepperoni") {
     return true
-  }
-  else {
+  } else {
     alert("We dont have that pizza")
+    exit()
   }
 }
 
@@ -35,14 +35,12 @@ const totalCost=(quant)=> {
 const orderTotal=totalCost(orderQuantity)
 
 // cookingTime() which takes orderQuantity and returns the number of minutes it will take to finish the order.
-const cookingTime=(quant)=>{
+const cookingTime= (quant) => {
   if (quant < 3) {
     return 10
-  }
-  else if (2 < quant && quant < 6) {
+  } else if (2 < quant && quant < 6) {
     return 15
-  }
-  else if (6 < quant){
+  } else if (6 < quant) {
     return 20
   }
 }
@@ -50,3 +48,7 @@ const cookingTime=(quant)=>{
 const Time=cookingTime(orderQuantity)
 
 alert("Great, I'll get started on your " + orderName + " right away, it will cost " + orderTotal + " kr. The pizzas will take " + Time + " minutes")
+
+// const wiki =
+//
+// alert(wiki.length)
