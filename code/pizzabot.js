@@ -11,11 +11,15 @@ const Z = pepperoni
 
 const pizzas = "Hey! Happy to serve your pizza. On our menu we have " + X + ", " + Y + " and "+ Z
 document.getElementById("meny").innerHTML = pizzas
+document.getElementById("piz1").innerHTML = X
+document.getElementById("piz2").innerHTML = Y
+document.getElementById("piz3").innerHTML = Z
 
 // checkOrderName() which should take the orderName variable as an argument and return true or false if the pizza is on the menu or not.
 const checkOrderName=(orderName)=> {
   orderName=document.getElementById("order").value
-  if (orderName === "vegetarian" || orderName === "hawaiian" || orderName === "pepperoni") {
+  alert(orderName)
+  if (orderName === X || orderName === Y || orderName === Z) {
     document.getElementById("sort").innerHTML = "How many of " + orderName + " do you want?"
     return true
   } else {
