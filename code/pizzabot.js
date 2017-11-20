@@ -18,7 +18,6 @@ document.getElementById("piz3").innerHTML = Z
 // checkOrderName() which should take the orderName variable as an argument and return true or false if the pizza is on the menu or not.
 const checkOrderName=(orderName)=> {
   orderName=document.getElementById("order").value
-  alert(orderName)
   if (orderName === X || orderName === Y || orderName === Z) {
     document.getElementById("sort").innerHTML = "How many of " + orderName + " do you want?"
     return true
